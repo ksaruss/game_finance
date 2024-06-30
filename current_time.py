@@ -5,7 +5,7 @@ class CurrentTime:
         self._week = 1
         self._day = 0
 
-    def step(self):
+    def step(self) -> None:
         if self._week + 1 == 5:
             self._week = 1
             self._month += 1

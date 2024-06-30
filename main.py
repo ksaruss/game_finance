@@ -1,11 +1,21 @@
-from currentTime import CurrentTime
-from baseObject import BaseObject, Country
-from listCountry  import ListCountry
+from world import World
+from object.base_oblect import BaseObject
+from object.country import Country
 
-countrys = ListCountry()
+world = World()
 
-countrys.add_new_country(Country(name='1'))
-countrys.add_new_country(Country(name='2'))
+
+world.add_new_country('test1')
+world.add_new_country('test2')
+
+country1 = world.get_country_id(1)
+country2 = world.get_country_id(2)
+
+country1.add_new_company('productionCompany', 'company1')
+country1.add_new_company('productionCompany', 'company2')
+
+print(country1.get_all_company())
+
 
 
 
